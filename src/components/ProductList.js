@@ -1,5 +1,6 @@
 import React, {useState} from 'react'   
 import Products from "../data/Products";
+import Navbar from './Navbar';
 import ProductsCard from './ProductsCard';
 import './style.css'
 
@@ -27,13 +28,7 @@ const ProductList = () => {
     }
         return (
             <>
-            <nav className="navbar">
-                <div className="btn-group">
-                    <button className="btn-group_item" onClick={()=>setProductData(Products)}>All</button>
-                    <button className="btn-group_item" onClick={()=>filterItem("leafy")}>Green Vegetables</button>
-                    <button className="btn-group_item" onClick={()=>filterItem("seasonal")}>Seasonal</button>
-                </div>
-            </nav>
+           <Navbar filterItem={filterItem}/>
             <ProductsCard productData={productData}/>
             </>
   );
