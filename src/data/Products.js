@@ -90,6 +90,24 @@ const Products=[
         unit:"Rs/Kg",
         description:"Anti Oxident increase your immunity power. ",
         category:"Morning"
+    },
+    {
+        id:11,
+        name:"Lauki220",
+        image:"images/lauki.jpg",
+        price:70,
+        unit:"Rs/Kg",
+        description:"Anti Oxident increase your immunity power. ",
+        category:"Evening"
+    },
+    {
+        id:12,
+        name:"Lauki420",
+        image:"images/lauki.jpg",
+        price:70,
+        unit:"Rs/Kg",
+        description:"Anti Oxident increase your immunity power. ",
+        category:"Summer"
     }
 ];
 

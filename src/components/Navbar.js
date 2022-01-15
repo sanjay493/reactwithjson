@@ -1,14 +1,21 @@
 import React from 'react'
 
-const Navbar=(filterItem)=> {
+const Navbar=({filterItem,productList})=> {
     
         return (
           <>
            <nav className="navbar">
                 <div className="btn-group">
-                    <button className="btn-group_item" onClick={()=>filterItem("leafy")}>Green Vegetables</button>
-                    <button className="btn-group_item" onClick={()=>filterItem("seasonal")}>Seasonal</button>
-                </div>
+                   {
+                     productList.map((curElem)=>{
+                       return(
+                        <button className="btn-group_item" onClick={()=>filterItem(curElem)}>{curElem}</button>
+                   
+                       )
+                     })
+                   }
+
+                     </div>
             </nav>
           
           </>

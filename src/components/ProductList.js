@@ -11,7 +11,7 @@ import './style.css'
 //use ...  Spread Operator to get exact desired data in array format.
 const uniqueList=[...new Set(Products.map((curElem)=>{
     return curElem.category;
-}))]
+})),"All",]
 
 console.log(uniqueList)
 
@@ -19,8 +19,13 @@ const ProductList = () => {
 
     const [productData,setProductData]=useState(Products);
     //console.log(productData)
+    const [productList,setProductList]=useState(uniqueList);
 
     const filterItem=(category)=>{
+        if(category==="All"){
+            setProductData(Products);
+            return
+        }
         const updatedList=Products.filter((curElem)=>{
             return curElem.category===category;
         })
@@ -28,7 +33,7 @@ const ProductList = () => {
     }
         return (
             <>
-           <Navbar filterItem={filterItem}/>
+           <Navbar filterItem={filterItem} productList={productList}/>
             <ProductsCard productData={productData}/>
             </>
   );
